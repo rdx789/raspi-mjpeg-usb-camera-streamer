@@ -1,0 +1,20 @@
+[package]
+name = "myCameraStream"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gstreamer = "0.24.4"
+#gstreamer-video ="0.24.4"
+gstreamer-app = { version = "0.24.4", features = ["v1_20"] }
+anyhow = "1.0.100"
+axum = "0.8.8"
+tokio = { version = "1.48.0", features = ["full"] }
+#tokio-stream = { version = "0.1.17", features = ["sync"] }
+futures = "0.3.31"
+#ctrlc = "3.5.1"
+bytes = "1.11.0"
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.22", features = ["fmt", "chrono"] }
+socket2 = "0.6.1"
+
