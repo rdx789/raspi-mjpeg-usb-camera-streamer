@@ -181,6 +181,7 @@ fn start_pipeline(
         let capsfilter = gst::ElementFactory::make("capsfilter")
             .build()
             .unwrap();
+
         let caps = Caps::builder("image/jpeg")
             .field("width", 1280)
             .field("height", 960)
@@ -191,6 +192,7 @@ fn start_pipeline(
         let appsink = gst::ElementFactory::make("appsink")
             .build().unwrap()
             .dynamic_cast::<AppSink>().unwrap();
+            
         appsink.set_property("sync", &false);
         appsink.set_property("emit-signals", &false);
         appsink.set_property("max-buffers", &1u32);
